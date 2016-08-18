@@ -1,8 +1,8 @@
-# Ether Token JS
+# Etherem Web Token
 
-bundling Ethereum function-calls into [JWT](https://jwt.io/)-like tokens.
+EWT bundles Ethereum function-calls into [JWT](https://jwt.io/)-like tokens. It simplifies the use of ECDSA signatures for webapps and the development of [Smart Oracles](https://github.com/codius/codius/wiki/Smart-Oracles:-A-Simple,-Powerful-Approach-to-Smart-Contracts).
 
-## Use Sign
+## Create and Sign a Token
 
 ```javascript
 var ABI = [{
@@ -16,9 +16,9 @@ new Token(ABI).test(true, 'string').sign(priv);
 => 'aaaaaa.bbbbbb.cccccc'
 ```
 
-## Example
+## Signed Token Example
 
-`eyJ0eXBlIjoiRVdUIiwiYWxnIjoiRVMyNTZrIn0.eyJ0ZXN0IjpbeyJib29sIjp0cnVlfSx7InN0cmluZyI6ImpvaGJhIn1dfQ.Xm0gkO3-jeAxsLU35g60hALU3CrIYQRFnyGv5vbdCDRlB1yABF8Qu8B9pjbIDwh7hfI_d_O5aQoZNib7WqOeLA` 
+`eyJ0eXBlIjoiRVdUIiwiYWxnIjoiRVMyNTZrIn0`.`eyJ0ZXN0IjpbeyJib29sIjp0cnVlfSx7InN0cmluZyI6ImpvaGJhIn1dfQ`.`Xm0gkO3-jeAxsLU35g60hALU3CrIYQRFnyGv5vbdCDRlB1yABF8Qu8B9pjbIDwh7hfI_d_O5aQoZNib7WqOeLA` 
 
 encodes
 
@@ -35,7 +35,7 @@ encodes
 ```
 
 
-## Use Parse
+## Parse a Token
 
 ```javascript
 Token.parse('aaaaaa.bbbbbb.cccccc');
