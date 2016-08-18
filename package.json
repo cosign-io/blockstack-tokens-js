@@ -1,8 +1,7 @@
 {
   "name": "ethereum-web-token",
-  "version": "0.1.0",
-  "main": "index.js",
-  "jsnext:main": "lib/index.js",
+  "version": "0.1.1",
+  "main": "lib/index.js",
   "author": "Johann Barbie <johannbarbie@me.com>",
   "license": "MIT",
   "repository": {
