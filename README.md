@@ -1,6 +1,6 @@
 # Ether Token JS
 
-bundling Ethereum function-calls into JWT-like tokens.
+bundling Ethereum function-calls into [JWT](https://jwt.io/)-like tokens.
 
 ## Use Sign
 
@@ -16,22 +16,11 @@ new Token(ABI).test(true, 'string').sign(priv);
 => 'aaaaaa.bbbbbb.cccccc'
 ```
 
-## Use Parse
-
-```javascript
-Token.parse('aaaaaa.bbbbbb.cccccc');
-
-=> {
-  values: [true, 'string'],
-  signer: '...' //should match address of priv
-}
-```
-
 ## Example
 
 `eyJ0eXBlIjoiRVdUIiwiYWxnIjoiRVMyNTZrIn0.eyJ0ZXN0IjpbeyJib29sIjp0cnVlfSx7InN0cmluZyI6ImpvaGJhIn1dfQ.Xm0gkO3-jeAxsLU35g60hALU3CrIYQRFnyGv5vbdCDRlB1yABF8Qu8B9pjbIDwh7hfI_d_O5aQoZNib7WqOeLA` 
 
-matches
+encodes
 
 ```js
 {
@@ -44,3 +33,16 @@ matches
   }
 }
 ```
+
+
+## Use Parse
+
+```javascript
+Token.parse('aaaaaa.bbbbbb.cccccc');
+
+=> {
+  values: [true, 'string'],
+  signer: '...' //should match address of priv
+}
+```
+
