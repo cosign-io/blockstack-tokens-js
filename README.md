@@ -2,21 +2,30 @@
 
 EWT bundles Ethereum function-calls into [JWT](https://jwt.io/)-like tokens. It simplifies the use of ECDSA signatures for webapps and the development of [Smart Oracles](https://github.com/codius/codius/wiki/Smart-Oracles:-A-Simple,-Powerful-Approach-to-Smart-Contracts).
 
-## Create and Sign a Token
+## Installation
+
+Install the package with `npm i -S ethereum-web-token` from the [npm registry ethereum-web-token](https://www.npmjs.com/package/ethereum-web-token)
+
+
+## Usage
+
+### Create and Sign a Token
 
 ```javascript
-var ABI = [{
+import EWT from 'ethethereum-web-token';
+
+let ABI = [{
   type: 'function', name: 'test',
   inputs: [{ type: 'bool' }, { type: 'string' }]
 }];
-var priv = '...';
+let priv = '...';
 
-new Token(ABI).test(true, 'string').sign(priv);
+new EWT(ABI).test(true, 'string').sign(priv);
 
 => 'aaaaaa.bbbbbb.cccccc'
 ```
 
-## Signed Token Example
+### Signed Token Example
 
 `eyJ0eXBlIjoiRVdUIiwiYWxnIjoiRVMyNTZrIn0`.`eyJ0ZXN0IjpbeyJib29sIjp0cnVlfSx7InN0cmluZyI6ImpvaGJhIn1dfQ`.`Xm0gkO3-jeAxsLU35g60hALU3CrIYQRFnyGv5vbdCDRlB1yABF8Qu8B9pjbIDwh7hfI_d_O5aQoZNib7WqOeLA` 
 
@@ -35,10 +44,12 @@ encodes
 ```
 
 
-## Parse a Token
+### Parse a Token
 
 ```javascript
-Token.parse('aaaaaa.bbbbbb.cccccc');
+import EWT from 'ethethereum-web-token';
+
+EWT.parse('aaaaaa.bbbbbb.cccccc');
 
 => {
   values: [true, 'string'],
