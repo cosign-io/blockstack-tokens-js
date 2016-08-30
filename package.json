@@ -1,6 +1,6 @@
 {
   "name": "ethereum-web-token",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "dist/index.js",
   "author": "Johann Barbie <johannbarbie@me.com>",
   "license": "MIT",
@@ -38,6 +38,7 @@
   "dependencies": {
     "base64url": "^2.0.0",
     "bignumber.js": "^2.3.0",
+    "bn.js": "^4.11.6",
     "ecdsa-sig-formatter": "^1.0.7",
     "es6-promise": "^3.2.1",
     "ethabi-js": "^0.0.59",
