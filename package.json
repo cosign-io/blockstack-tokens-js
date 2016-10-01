@@ -1,6 +1,6 @@
 {
   "name": "ethereum-web-token",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "dist/index.js",
   "author": "Johann Barbie <johannbarbie@me.com>",
   "license": "MIT",
